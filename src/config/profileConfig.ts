@@ -2,11 +2,11 @@ import type { ProfileConfig } from "../types/config";
 
 export const profileConfig: ProfileConfig = {
 	// 头像
-	avatar: "/assets/images/avatar.webp",
+	avatar: "/assets/images/A1.jpg",
 	// 名字
-	name: "Firefly",
+	name: "今朝酒",
 	// 个人签名
-	bio: "Hello, I'm Firefly.",
+	bio: "你好,这里是今朝酒",
 
 	// 链接配置
 	// 已经预装的图标集：fa6-brands，fa6-regular，fa6-solid，material-symbols，simple-icons
@@ -15,6 +15,7 @@ export const profileConfig: ProfileConfig = {
 	// `pnpm add @iconify-json/<icon-set-name>`
 	// showName: true 时显示图标和名称，false 时只显示图标
 	links: [
+		/*
 		{
 			name: "Bilibli",
 			icon: "fa6-brands:bilibili",
@@ -39,5 +40,6 @@ export const profileConfig: ProfileConfig = {
 			url: "/rss/",
 			showName: false,
 		},
+		*/
 	],
 };
