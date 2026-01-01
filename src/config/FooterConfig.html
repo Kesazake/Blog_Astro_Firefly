@@ -1,1 +1,100 @@
-这里是HTML注入示例，你可以在这个文件中添加自定义的HTML内容
+<!-- 在原有内容基础上添加 -->
+
+<!-- 素材版权声明 -->
+<div class="material-credits mt-4 text-xs text-gray-500 dark:text-gray-400">
+    <details class="cursor-pointer group">
+        <summary class="inline-flex items-center gap-1 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
+            <svg class="w-3 h-3 group-open:rotate-90 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+            素材版权信息
+        </summary>
+        
+        <div class="mt-2 pl-4 border-l-2 border-gray-300 dark:border-gray-600 space-y-2">
+            <!-- 基础信息 -->
+            <p class="mb-1">本网站使用的视觉素材版权归属：</p>
+            
+            <!-- 作品信息 -->
+            <div class="space-y-1">
+                <div class="font-medium">壁纸以及头像：《花より弾丸》</div>
+                <div class="text-gray-400 dark:text-gray-500 text-xs">
+                    作者：アボガド6 (Avogado6)
+                </div>
+                
+                <!-- 作品链接 -->
+                <a href="https://static.wixstatic.com/media/7ac599_1e7d804eacf948a3b2497075fd483dc4~mv2.jpg/v1/fill/w_911,h_701,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/7ac599_1e7d804eacf948a3b2497075fd483dc4~mv2.jpg" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center gap-1 text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 transition-colors text-xs mt-1">
+                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd"/>
+                    </svg>
+                    查看作品
+                </a>
+            </div>
+            
+            <!-- 艺术家信息 -->
+            <div class="pt-1">
+                <div class="font-medium mb-1">艺术家信息</div>
+                <div class="space-y-1">
+                    <a href="https://avogado6.com" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center gap-1 text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 transition-colors">
+                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd"/>
+                        </svg>
+                        官方网站：avogado6.com
+                    </a>
+                    
+                    <a href="https://www.avogado6.com/guideline" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center gap-1 text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 transition-colors">
+                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                        </svg>
+                        使用条款
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 使用声明 -->
+            <div class="pt-2 border-t border-gray-200 dark:border-gray-700">
+                <p class="italic">
+                    本站为个人非营利博客，所有素材均严格遵循原作者的
+                    <a href="https://www.avogado6.com/guideline" 
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="text-blue-500 hover:underline">
+                        使用条款
+                    </a>。
+                    不产生任何商业收入。
+                </p>
+            </div>
+        </div>
+    </details>
+</div>
+
+<!-- 可选：添加分隔线 -->
+<hr class="my-4 border-gray-200 dark:border-gray-700">
+
+<!-- 样式优化 -->
+<style>
+.material-credits details {
+    transition: all 0.3s ease;
+}
+.material-credits details[open] summary {
+    font-weight: 600;
+}
+.material-credits summary::-webkit-details-marker {
+    display: none;
+}
+.material-credits summary {
+    list-style: none;
+    outline: none;
+}
+.material-credits a {
+    word-break: break-word;
+}
+</style>

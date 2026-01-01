@@ -8,7 +8,7 @@ category: 文章示例
 licenseName: "未授权"
 author: emn178
 sourceLink: "https://github.com/emn178/markdown"
-draft: false
+draft: true
 
 ---
 
@@ -49,7 +49,7 @@ HTML 标签：`<p>`
 
     This will be
     inline.
-
+    
     This is second paragraph.
 
 预览：
@@ -191,7 +191,7 @@ Markdown 允许“偷懒”：在一个硬换行段落中，只在第一行前�
     > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
     consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
     Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-
+    
     > Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
     id sem consectetuer libero luctus adipiscing.
 
@@ -360,7 +360,7 @@ HTML 标签：`<ol>`
 代码：
 
     *   A list item with a blockquote:
-
+    
         > This is a blockquote
         > inside a list item.
 
@@ -382,7 +382,7 @@ HTML 标签：`<ol>`
 代码：
 
     *   A list item with a code block:
-
+    
             <code goes here>
 
 预览：
@@ -427,7 +427,7 @@ HTML 标签：`<pre>`
 代码：
 
     This is a normal paragraph:
-
+    
         This is a code block.
 
 预览：
@@ -469,7 +469,7 @@ This is a normal paragraph:
 代码：
 
     Here's an example:
-
+    
     ```
     function test() {
       console.log("notice the blank line before this function?");
@@ -614,7 +614,7 @@ Markdown 支持两种链接样式：行内链接与引用式链接。
 代码：
 
     This is [an example](http://example.com/ "Title") inline link.
-
+    
     [This link](http://example.net/) has no title attribute.
 
 预览：
@@ -707,11 +707,11 @@ Markdown 使用 **星号 (\*)** 或 **下划线 (\_)** 表示强调。**一个�
 代码：
 
     *single asterisks*
-
+    
     _single underscores_
-
+    
     **double asterisks**
-
+    
     __double underscores__
 
 预览：
@@ -782,7 +782,7 @@ Use the `printf()` function.
 代码：
 
     A single backtick in a code span: `` ` ``
-
+    
     A backtick-delimited string in a code span: `` `foo` ``
 
 预览：
@@ -811,7 +811,7 @@ Markdown 的图片语法与链接类似，支持行内与引用两种方式。
 代码：
 
     ![Alt text](/path/to/img.jpg)
-
+    
     ![Alt text](/path/to/img.jpg "Optional title")
 
 预览：
@@ -883,7 +883,7 @@ Markdown 支持一种便捷写法来创建“自动链接”（URL 与邮箱地�
 代码：
 
     <http://example.com/>
-
+    
     <address@example.com>
 
 预览：
@@ -954,13 +954,13 @@ Code:
 代码：
 
     This is a regular paragraph.
-
+    
     <table>
         <tr>
             <td>Foo</td>
         </tr>
     </table>
-
+    
     This is another regular paragraph.
 
 预览：
@@ -986,7 +986,7 @@ This is another regular paragraph.
 代码：
 
     <span>**Work**</span>
-
+    
     <div>
         **No Work**
     </div>

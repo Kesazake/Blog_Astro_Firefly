@@ -33,8 +33,13 @@ export const siteConfig: SiteConfig = {
 	favicon: [
 		// 留空以使用默认 favicon
 		{
-			src: "/assets/images/favicon.ico", // 图标文件路径
+			src: "/assets/images/Icon.png", // 图标文件路径
 			theme: "light", // 可选，指定主题 'light' | 'dark'
+			sizes: "32x32", // 可选，图标大小
+		},
+		{
+			src: "/assets/images/Icon.png", // 图标文件路径
+			theme: "dark", // 可选，指定主题 'light' | 'dark'
 			sizes: "32x32", // 可选，图标大小
 		},
 	],
@@ -46,8 +51,8 @@ export const siteConfig: SiteConfig = {
 	// { type: "image", value: "https://example.com/logo.png", alt: "Firefly Logo" }
 	navbarLogo: {
 		type: "image",
-		value: "/assets/images/BB.webp",
-		alt: "🍀",
+		value: "/assets/images/Icon.png",
+		alt: "sakula",
 	},
 	navbarTitle: "今朝酒", // 导航栏标题，可以设置为与 title 不同的值，如果不设置则使用 title
 	navbarWidthFull: false, // 全宽导航栏，导航栏是否占满屏幕宽度，true：占满，false：不占满
@@ -107,9 +112,9 @@ export const siteConfig: SiteConfig = {
 		// 背景图片配置
 		src: {
 			// 桌面背景图片
-			desktop: "/assets/images/A1.jpg",
+			desktop: "/assets/images/花より弾丸.avif",
 			// 移动背景图片
-			mobile: "/assets/images/A1.jpg",
+			mobile: "/assets/images/kawaii on off.gif",
 		},
 
 		// Banner模式特有配置
