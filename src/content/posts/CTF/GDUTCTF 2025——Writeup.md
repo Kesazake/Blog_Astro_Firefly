@@ -14,7 +14,7 @@ image: ./kawaii 8bit.gif
 ---
 # GDUTCTF 2025——Writeup
 
-![战队管理页面](./GDUTCTF 2025——Writeup.assets/image-20251123222949357.png)
+![战队管理页面](./writeup-assets/image-20251123222949357.png)
 
 希望下一次可以取得更好的成绩。
 
@@ -45,7 +45,7 @@ image: ./kawaii 8bit.gif
 
 从5开始增加长度，尝试所有可能的key，并且输出解密后符合flag格式的明文：
 
-![XOR爆破代码运行结果](./GDUTCTF 2025——Writeup.assets/image-20251124170806234.png)
+![XOR爆破代码运行结果](./writeup-assets/image-20251124170806234.png)
 
 **flag{ZIzBw3QjdLty60CYCt}**
 
@@ -64,7 +64,7 @@ image: ./kawaii 8bit.gif
 >                decode(cipher, key_all, b'}')
 > ```
 
-![自己写的XOR爆破代码](GDUTCTF 2025——Writeup.assets/image-20251124171250907.png)
+![自己写的XOR爆破代码](./writeup-assets/image-20251124171250907.png)
 
 ---
 
@@ -95,7 +95,7 @@ image: ./kawaii 8bit.gif
 
 是某种输入法？但是看起来不像是我常用的全拼。打开输入法查看其他的键盘：
 
-<img src="GDUTCTF 2025——Writeup.assets/image-20251123233056530.png" alt="我的手机输入法" style="zoom: 25%;" />
+<img src="./writeup-assets/image-20251123233056530.png" alt="我的手机输入法" style="zoom: 25%;" />
 
 发现一个我从来没用过的键盘，对着文本一个一个输入，得到这样一段信息：
 
@@ -224,7 +224,7 @@ image: ./kawaii 8bit.gif
 
 ds给出了解密代码，运行之后得到flag（和rk碎片）
 
-![解离散对数求flag](GDUTCTF 2025——Writeup.assets/image-20251124193706407.png)
+![解离散对数求flag](./writeup-assets/image-20251124193706407.png)
 
 **flag{Wow, you're a master of discrete logarithms!}**
 
@@ -257,7 +257,7 @@ for i in arr:
     print(chr(int(i,2)+97), end="")
 ```
 
-![二进制转十进制映射字母表](GDUTCTF 2025——Writeup.assets/image-20251124224106764.png)
+![二进制转十进制映射字母表](./writeup-assets/image-20251124224106764.png)
 
 **flag{dunshanshuodedui}**
 
@@ -359,7 +359,7 @@ for i in arr:
 
 按照这个逻辑编写代码，运行之后就可以得到flag：
 
-![dp泄露攻击RSA](GDUTCTF 2025——Writeup.assets/image-20251124213750739.png)
+![dp泄露攻击RSA](./writeup-assets/image-20251124213750739.png)
 
 **flag{qeem8obeyi5lcqedkw8w}**
 
@@ -375,7 +375,7 @@ for i in arr:
 
 关注送flag啦！
 
-<img src="GDUTCTF 2025——Writeup.assets/image-20251124213912752.png" alt="关注A&D网络攻防实验室公众号送flag" style="zoom:50%;" />
+<img src="./writeup-assets/image-20251124213912752.png" alt="关注A&D网络攻防实验室公众号送flag" style="zoom:50%;" />
 
 **flag{i_HavE-Re@D_Th3_RU1es_c@rEFUlLY_&_hOneSTY_is_Th3_BE5T-p0llcY}**
 
@@ -468,7 +468,7 @@ else:
     print("未找到 flag{ 开头的映射")
 ```
 
-![爆破Basehajimi](GDUTCTF 2025——Writeup.assets/image-20251125124240154.png)
+![爆破Basehajimi](./writeup-assets/image-20251125124240154.png)
 
 **flag{B4s3H@j1mi-I5_An_4W3sOM3-M0DlFied_b@S3-cIpher!!!}**
 
@@ -482,7 +482,7 @@ else:
 
  [image.tif](GDUTCTF 2025——Writeup.assets\image.tif) 
 
-![涩图？](GDUTCTF 2025——Writeup.assets/image-20251125124716179.png)
+![涩图？](./writeup-assets/image-20251125124716179.png)
 
 可以看到有一部分被遮盖了，并且图片的后缀名也不是常见的图片后缀名。
 
@@ -490,27 +490,27 @@ else:
 
 必应搜索“tif格式用什么软件打开”：
 
-![TIF格式用什么打开](GDUTCTF 2025——Writeup.assets/image-20251125125208489.png)
+![TIF格式用什么打开](./writeup-assets/image-20251125125208489.png)
 
 Ps是收费的，虽然有破解版但是没那么多时间去找资源了。下载一个GIMP看看。这里就不展示下载过程了。
 
 打开之后是这样的：
 
-![GIMP欢迎使用](GDUTCTF 2025——Writeup.assets/image-20251125125351288.png)
+![GIMP欢迎使用](./writeup-assets/image-20251125125351288.png)
 
 选择附件的 [image.tif](GDUTCTF 2025——Writeup.assets\image.tif) 打开，惊讶的发现这一个图片有多个图像，而且其中一个图像的名字正是flag！
 
-![TIF中存在多个图像](GDUTCTF 2025——Writeup.assets/image-20251125125545352.png)
+![TIF中存在多个图像](./writeup-assets/image-20251125125545352.png)
 
 导入flag后放大仔细观察，可以在右下角发现某些地方似乎和背景不同：
 
-![观察flag右下角](GDUTCTF 2025——Writeup.assets/image-20251125125710719.png)
+![观察flag右下角](./writeup-assets/image-20251125125710719.png)
 
 因为第一次用这个软件，不知道怎么可以删除干扰的背景，花了好一会一点一点尝试，最后发现可以这样：
 
-![删除透明背景](GDUTCTF 2025——Writeup.assets/image-20251125130017724.png)
+![删除透明背景](./writeup-assets/image-20251125130017724.png)
 
-flag就在其中:![flag](GDUTCTF 2025——Writeup.assets/image-20251125130054466.png)
+flag就在其中:![flag](./writeup-assets/image-20251125130054466.png)
 
 **flag{oM07h1rOi!y0u_kn0w_t1fF_sUp9or7s_L@y3rs}**
 
@@ -524,7 +524,7 @@ flag就在其中:![flag](GDUTCTF 2025——Writeup.assets/image-2025112513005446
 
 这个就没什么技巧了，不会的就问ds，不过ds也不一定是对的，某些怀疑的答案可以同时用搜索引擎寻找答案。
 
-![知识问答](GDUTCTF 2025——Writeup.assets/image-20251125164506855.png)
+![知识问答](./writeup-assets/image-20251125164506855.png)
 
 **flag{6dd6996a-a6db-49bf-80af-7103e919bd94}**
 
@@ -550,7 +550,7 @@ flag就在其中:![flag](GDUTCTF 2025——Writeup.assets/image-2025112513005446
 
 开启靶机，是一个问答网站。
 
-第一题非常简单，直接可以找到日期。![初音未来痛车](GDUTCTF 2025——Writeup.assets/image-20251125165238980.png)
+第一题非常简单，直接可以找到日期。![初音未来痛车](./writeup-assets/image-20251125165238980.png)
 
 不过Hatsune Miku提交之后却提示错误。询问豆包发现原来是Racing Miku（赛车未来）~~（话说到底有多少种未来？）~~
 
@@ -558,11 +558,11 @@ flag就在其中:![flag](GDUTCTF 2025——Writeup.assets/image-2025112513005446
 
 第二题的高达也非常有象征性，在必应搜索“高达立像”，可以找到相关信息：
 
-![搜索高达立像](GDUTCTF 2025——Writeup.assets/image-20251125170232475.png)
+![搜索高达立像](./writeup-assets/image-20251125170232475.png)
 
 可以知道是高达立像的位置**上海金桥购物中心**
 
-![百度词条](GDUTCTF 2025——Writeup.assets/image-20251125170342870.png)
+![百度词条](./writeup-assets/image-20251125170342870.png)
 
 这个词条页面可以找到高达立像的首演日期：**2021/05/28**
 
@@ -576,7 +576,7 @@ flag就在其中:![flag](GDUTCTF 2025——Writeup.assets/image-2025112513005446
 
 填写所有答案之后得到flag：
 
-![flag](GDUTCTF 2025——Writeup.assets/image-20251125171232035.png)
+![flag](./writeup-assets/image-20251125171232035.png)
 
 **flag{828ed7f1-6282-499c-a052-8eaa4d877781}**
 
@@ -590,19 +590,19 @@ flag就在其中:![flag](GDUTCTF 2025——Writeup.assets/image-2025112513005446
 
 第一题直接搜索“首届广东工业大学网络安全技能大赛”
 
-![搜索首届GDUT CTD](GDUTCTF 2025——Writeup.assets/image-20251125173418804.png)
+![搜索首届GDUT CTD](./writeup-assets/image-20251125173418804.png)
 
-![2024GDUT CTf](GDUTCTF 2025——Writeup.assets/image-20251125173724048.png)
+![2024GDUT CTf](./writeup-assets/image-20251125173724048.png)
 
 所以第一题答案：**202412070900-202412071830**。
 
 第二题搜索题目关键词“广东工业大学保卫处”：
 
-![搜索](GDUTCTF 2025——Writeup.assets/image-20251125180120836.png)
+![搜索](./writeup-assets/image-20251125180120836.png)
 
 在保卫处平台搜索关键词“自行车共享服务”：
 
-![自行车共享服务](GDUTCTF 2025——Writeup.assets/image-20251125180403924.png)
+![自行车共享服务](./writeup-assets/image-20251125180403924.png)
 
 所以第二题答案：**20240118**。
 
@@ -610,21 +610,21 @@ flag就在其中:![flag](GDUTCTF 2025——Writeup.assets/image-2025112513005446
 
 再往下查看，发现了另一个网页：
 
-![搜索广工书目检索系统](GDUTCTF 2025——Writeup.assets/image-20251125174209977.png)![广工书目检索系统](GDUTCTF 2025——Writeup.assets/image-20251125174335930.png)
+![搜索广工书目检索系统](./writeup-assets/image-20251125174209977.png)![广工书目检索系统](./writeup-assets/image-20251125174335930.png)
 
 于是找到第三题答案：**SULCMIS-OPAC 4.01**
 
 第四题搜索“广东工业大学 全运会”：
 
-![搜索广东工业大 全运会](GDUTCTF 2025——Writeup.assets/image-20251125175033264.png)
+![搜索广东工业大 全运会](./writeup-assets/image-20251125175033264.png)
 
-![广东工业大学 全运会](GDUTCTF 2025——Writeup.assets/image-20251125175152842.png)
+![广东工业大学 全运会](./writeup-assets/image-20251125175152842.png)
 
 所以第四题答案：**9 4**
 
 回答所有问题得到flag：
 
-![广工问答flag](GDUTCTF 2025——Writeup.assets/image-20251125180455992.png)
+![广工问答flag](./writeup-assets/image-20251125180455992.png)
 
 **flag{2549e4b8-94a2-4526-bffd-273cb08598fe}**
 
@@ -733,7 +733,7 @@ p = try_chain_attack()
 p.interactive()
 ```
 
-![链式攻击的结果](GDUTCTF 2025——Writeup.assets/image-20251125212147497.png)
+![链式攻击的结果](./writeup-assets/image-20251125212147497.png)
 
 **flag{d546576e-9edc-41a7-8b78-ef2894bea17f}**
 
@@ -780,7 +780,7 @@ int main(void) {
 
 哇！这看起来像是异或解密然后输出flag的程序欸！按道理来说直接运行就可以得到flag，这就是签到题吗。
 
-![前一半flag](GDUTCTF 2025——Writeup.assets/image-20251125214359747.png)
+![前一半flag](./writeup-assets/image-20251125214359747.png)
 
 然而运行之后却发现flag被分成两部分输出，只有前一半可以辨认：**flag{r@nd_d1ff_0n_d**
 
@@ -798,7 +798,7 @@ int main(void) {
 
 [GCC编译的在线C语言编辑编译网站](https://www.cainiaojc.com/tool/c/)
 
-![后一半flag](GDUTCTF 2025——Writeup.assets/image-20251125215002270.png)
+![后一半flag](./writeup-assets/image-20251125215002270.png)
 
 果然得到了后一半flag：**Iff3r9n7_pl4tf0rm5}**。和之前得到的前一半合并就可以得到flag：
 
@@ -818,7 +818,7 @@ int main(void) {
 
 先尝试最直接的办法：F12然后搜索“flag”：
 
-![F12搜索flag](GDUTCTF 2025——Writeup.assets/image-20251125215540783.png)
+![F12搜索flag](./writeup-assets/image-20251125215540783.png)
 
 **Wm14aFozdGpNVGMyTlRaallTMWxPVGMzTFRRek56QXRZVGswWlMweE1Ua3haR0l5WkdWa1lXTjkK**
 
