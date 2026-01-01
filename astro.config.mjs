@@ -186,6 +186,9 @@ export default defineConfig({
 		],
 	},
 	vite: {
+		// 添加这一行，支持 .tif 和 .tiff 格式
+		assetsInclude: ['**/*.tif', '**/*.tiff'],
+		
 		build: {
 			rollupOptions: {
 				onwarn(warning, warn) {
