@@ -114,7 +114,7 @@ export const siteConfig: SiteConfig = {
 			// 桌面背景图片
 			desktop: "/assets/images/花より弾丸.avif",
 			// 移动背景图片
-			mobile: "/assets/images/kawaii on off.gif",
+			mobile: "/assets/images/花より弾丸.jpg",
 		},
 
 		// Banner模式特有配置
