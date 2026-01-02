@@ -6,7 +6,7 @@ import { fontConfig } from "./fontConfig";
 const SITE_LANG = "zh_CN";
 
 export const siteConfig: SiteConfig = {
-	title: "Kesazake",
+	title: "今朝酒",
 	subtitle: "Blog",
 	site_url: "https://kesazake.top",
 	description:
@@ -128,20 +128,15 @@ export const siteConfig: SiteConfig = {
 				// 主页显示自定义文本（全局开关）
 				enable: false,
 				// 主页横幅主标题
-				title: "Lovely firefly!",
+				title: "",
 				// 主页横幅副标题
 				subtitle: [
-					"In Reddened Chrysalis, I Once Rest",
-					"From Shattered Sky, I Free Fall",
-					"Amidst Silenced Stars, I Deep Sleep",
-					"Upon Lighted Fyrefly, I Soon Gaze",
-					"From Undreamt Night, I Thence Shine",
-					"In Finalized Morrow, I Full Bloom",
+					"今朝有酒今朝醉，明日愁来明日愁",
 				],
 				typewriter: {
 					//打字机开启 → 循环显示所有副标题
 					//打字机关闭 → 每次刷新随机显示一条副标题
-					enable: false, // 启用副标题打字机效果
+					enable: true, // 启用副标题打字机效果
 					speed: 100, // 打字速度（毫秒）
 					deleteSpeed: 50, // 删除速度（毫秒）
 					pauseTime: 2000, // 完全显示后的暂停时间（毫秒）
@@ -149,16 +144,16 @@ export const siteConfig: SiteConfig = {
 			},
 			credit: {
 				enable: {
-					desktop: false, // 桌面端显示横幅图片来源文本
-					mobile: false, // 移动端显示横幅图片来源文本
+					desktop: true, // 桌面端显示横幅图片来源文本
+					mobile: true, // 移动端显示横幅图片来源文本
 				},
 				text: {
-					desktop: "Pixiv - 晚晚喵", // 桌面端要显示的来源文本
-					mobile: "Pixiv - KiraraShss", // 移动端要显示的来源文本
+					desktop: "作者：アボガド6 (Avogado6)", // 桌面端要显示的来源文本
+					mobile: "作者：アボガド6 (Avogado6)", // 移动端要显示的来源文本
 				},
 				url: {
-					desktop: "https://www.pixiv.net/artworks/135490046", // 桌面端原始艺术品或艺术家页面的 URL 链接
-					mobile: "https://www.pixiv.net/users/42715864", // 移动端原始艺术品或艺术家页面的 URL 链接
+					desktop: "https://static.wixstatic.com/media/7ac599_1e7d804eacf948a3b2497075fd483dc4~mv2.jpg/v1/fill/w_911,h_701,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/7ac599_1e7d804eacf948a3b2497075fd483dc4~mv2.jpg", // 桌面端原始艺术品或艺术家页面的 URL 链接
+					mobile: "https://static.wixstatic.com/media/7ac599_1e7d804eacf948a3b2497075fd483dc4~mv2.jpg/v1/fill/w_911,h_701,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/7ac599_1e7d804eacf948a3b2497075fd483dc4~mv2.jpg", // 移动端原始艺术品或艺术家页面的 URL 链接
 				},
 			},
 			navbar: {

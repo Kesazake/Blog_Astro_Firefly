@@ -151,18 +151,18 @@ image: ./kawaii 8bit.gif
 >
 > 4. 对于n_values的每一个n，随机生成一个八元数p，它的每个分量都是在[1, m-1]的随机整数。放进p_values
 >
-> 5. 对于每一组（n，p），计算q = p^n^，乘法是八元数乘法（mod m）。放进q_values
+> 5. 对于每一组（n，p），计算q = p<sup>n</sup>，乘法是八元数乘法（mod m）。放进q_values
 >
 >    ```python
 >    for i, n in enumerate(n_values):
 >        p = O(tuple(random.randint(1, m-1) for _ in range(8)))
 >        q = p ** n
->                                                                          
+>                                                                             
 >        p_values.append(p.vector())
 >        q_values.append(q.vector())
 >    ```
 
-**简而言之，整个加密系统将每一个明文块n隐藏为q = p^n^，通过八元数幂运算的复杂性来掩盖明文块n**。
+**简而言之，整个加密系统将每一个明文块n隐藏为q = p<sup>n</sup>，通过八元数幂运算的复杂性来掩盖明文块n**。
 
 附件中给出了各个加密参数（m，p，q），因此解密的过程就是通过已知的加密参数还原n。
 
@@ -172,11 +172,11 @@ image: ./kawaii 8bit.gif
 
 **假设两个八元数a、b，对于a、b的范数N(a)、N(b)，有N(a * b) = N(a) * N(b)**。
 
-在本题中，八元数p^n^ = p * p * p * …… p（一共n个p）。
+在本题中，八元数p<sup>n</sup> = p * p * p * …… p（一共n个p）。
 
-于是我们有N(p^n^) = [N(p)]^n^ (mod m)。那么，令：h = N(q) mod m，g = N(p) mod m，则：h ≡ g^n^  (mod m)
+于是我们有N(p<sup>n</sup>) = [N(p)]<sup>n</sup> (mod m)。那么，令：h = N(q) mod m，g = N(p) mod m，则：h ≡ g<sup>n</sup>  (mod m)
 
-**于是，问题被简化为相对简单的离散对数问题：解 n = log~g~ h (mod m)**
+**于是，问题被简化为相对简单的离散对数问题：解 n = log<sub>g</sub> h (mod m)**
 
 关于离散对数的求解，可以用函数`sympy.ntheory.residue_ntheory.discrete_log(m, Nq, Np)`实现。
 
@@ -184,7 +184,7 @@ image: ./kawaii 8bit.gif
 >
 > 1. 对于每一组(p, q)，首先求对应的N(p)和N(q) (mod m)
 >
-> 2. 解离散对数 n = log~N(p)~ N(q) (mod m)
+> 2. 解离散对数 n = log<sub>N(p)</sub> N(q) (mod m)
 >
 > 3. 将n恢复为明文块[^逆大端序]
 >
@@ -195,11 +195,11 @@ image: ./kawaii 8bit.gif
 >    for i in range(len(p_values)):
 >        pv = p_values[i]
 >        qv = q_values[i]
->                                                                      
+>                                                                         
 >        # 计算范数
 >        Np = sum(x * x for x in pv) % m
 >        Nq = sum(x * x for x in qv) % m
->                                                                      
+>                                                                         
 >        # 使用 sympy 解离散对数
 >        try:
 >            n = sympy.ntheory.residue_ntheory.discrete_log(m, Nq, Np)
@@ -217,7 +217,7 @@ image: ./kawaii 8bit.gif
 >                    break
 >            if not found:
 >                print(f"Failed to find n for index {i}")
->                                                                      
+>                                                                         
 >    print("\nFlag + rk:", flag_bytes)
 >    print("Flag:", flag_bytes.split(b'\x00')[0])  # 提取 flag 部分
 >    ```
@@ -228,7 +228,7 @@ ds给出了解密代码，运行之后得到flag（和rk碎片）
 
 **flag{Wow, you're a master of discrete logarithms!}**
 
-[^大端序]:`bytes_to_long` ： n* = *b~0~* ×256^3^ + *b*~1~×256^2^ + *b*~2~×256^1^ + *b*~3~×256^0^
+[^大端序]:`bytes_to_long` ： n* = *b<sub>0</sub>* ×256<sup>3</sup> + *b*<sub>1</sub>×256<sup>2</sup> + *b*<sub>2</sub>×256<sup>1</sup> + *b*<sub>3</sub>×256<sup>0</sup>
 [^逆大端序]: `long_to_bytes`
 
 ---
@@ -295,13 +295,13 @@ for i in arr:
 >    e = 65537
 >    ```
 >
-> 4. 确定私钥d = e^-1^ mod phi
+> 4. 确定私钥d = e<sup>-1</sup> mod phi
 >
 >    ```python
 >    d = gmpy2.invert(e, phi)
 >    ```
 >
-> 5. 生成d~p~参数
+> 5. 生成d<sub>p</sub>参数
 >
 >    ```python
 >    dp = d % (p - 1)
@@ -313,21 +313,21 @@ for i in arr:
 >    m = bytes_to_long(flag.encode())
 >    ```
 >
-> 7. 对m加密得到密文c = m^d^ mod n
+> 7. 对m加密得到密文c = m<sup>d</sup> mod n
 >
 >    ```python
 >    c = pow(m, e, n)
 >    ```
 
-在RSA加密系统中，d~p~ =  d mod (p-1)，通过同余式代换，我们有**e * d~p~ = 1 + k*(p-1)**
+在RSA加密系统中，d<sub>p</sub> =  d mod (p-1)，通过同余式代换，我们有**e * d<sub>p</sub> = 1 + k*(p-1)**
 
-而通过加密文件，我们已知：e、n、d~p~、c.
+而通过加密文件，我们已知：e、n、d<sub>p</sub>、c.
 
 **换言之，我们可以尝试枚举在[1, e-1]中所有的整数k来暴力搜索p，进而一步步得到完整的私钥d**。
 
 > 解密过程
 >
-> 1. 因为e × d~p~  = 1 + k × (p-1)，所以可以枚举所有的k寻找可能的p
+> 1. 因为e × d<sub>p</sub>  = 1 + k × (p-1)，所以可以枚举所有的k寻找可能的p
 >
 >    ```python
 >    found = False
@@ -346,7 +346,7 @@ for i in arr:
 >
 > 4. 得到完整私钥d = e⁻¹ mod phi
 >
-> 5. 解密得到明文m = c^d^ mod n
+> 5. 解密得到明文m = c<sup>d</sup> mod n
 >
 >    ```python
 >    if found:
@@ -393,7 +393,7 @@ for i in arr:
 
 **Luminoria 说他做了一种新的编码方式叫做 `BaseHajimi`，你能够从上面提供的字符串中找到正确的解码方式并得到 flag 吗？**
 
-Base编码和解码的关键在于使用的字符集。给定有N=2^n^个字符的字符集，就可以进行Base N编码：
+Base编码和解码的关键在于使用的字符集。给定有N=2<sup>n</sup>个字符的字符集，就可以进行Base N编码：
 
 > 1. 将原始二进制数据以n个比特为单位分割（不足的比特补0，同时编码结果添加“=”标记）
 > 2. 每个单位转换为一个新的N进制整数m（0 <= m < N）

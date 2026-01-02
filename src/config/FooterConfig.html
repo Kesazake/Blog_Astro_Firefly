@@ -1,5 +1,27 @@
 <!-- 在原有内容基础上添加 -->
 
+<!-- 极简语录展示 -->
+<div class="random-quote mb-2 text-xs text-gray-600 dark:text-gray-400 italic transition-opacity duration-300">
+    <span id="quote-text">语录加载中...</span>
+    <span id="quote-author" class="ml-1 text-gray-500 dark:text-gray-500 not-italic">作者</span>
+</div>
+
+<script>
+const quotes = [
+    {text: "今朝有酒今朝醉，明日愁来明日愁", author: "罗隐"},
+    {text: "浮生只合尊前老，雪满长安道", author: "舒亶"},
+    {text: "浮云一别后，流水十年间", author: "韦应物"},
+    {text: "桃李春风一杯酒，江湖夜雨十年灯", author: "黄庭坚"},
+    {text: "山中何事？松花酿酒，春水煎茶", author: "张可久"}
+];
+
+document.addEventListener('DOMContentLoaded', function() {
+    const quote = quotes[Math.floor(Math.random() * quotes.length)];
+    document.getElementById('quote-text').textContent = `"${quote.text}"`;
+    document.getElementById('quote-author').textContent = quote.author ? `— ${quote.author}` : '';
+});
+</script>
+
 <!-- 素材版权声明 -->
 <div class="material-credits mt-4 text-xs text-gray-500 dark:text-gray-400">
     <details class="cursor-pointer group">
@@ -16,21 +38,9 @@
             
             <!-- 作品信息 -->
             <div class="space-y-1">
-                <div class="font-medium">壁纸以及头像：《花より弾丸》</div>
                 <div class="text-gray-400 dark:text-gray-500 text-xs">
                     作者：アボガド6 (Avogado6)
                 </div>
-                
-                <!-- 作品链接 -->
-                <a href="https://static.wixstatic.com/media/7ac599_1e7d804eacf948a3b2497075fd483dc4~mv2.jpg/v1/fill/w_911,h_701,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/7ac599_1e7d804eacf948a3b2497075fd483dc4~mv2.jpg" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="inline-flex items-center gap-1 text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 transition-colors text-xs mt-1">
-                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd"/>
-                    </svg>
-                    查看作品
-                </a>
             </div>
             
             <!-- 艺术家信息 -->
